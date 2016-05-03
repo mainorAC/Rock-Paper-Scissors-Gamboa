@@ -1,0 +1,20 @@
+{
+  "name": "mean-example",
+  "version": "1.0.0",
+  "description": "example mean",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Mainor Gamboa",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.4.14",
+	"express": "^4.7.1",
+	"method-override": "^2.1.2",
+	"body-parser": "^1.5.1"
+  }
+}

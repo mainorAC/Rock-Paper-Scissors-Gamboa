@@ -1,0 +1,260 @@
+
+    <div class="wrapper wrapper-content animated fadeInRight " >
+        <div class="row row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-12">
+                <div class="text-center m-t-lg">
+                    <h1>
+                        About me and Documentation Project
+                    </h1>
+                    <small>
+                        By Mainor Gamboa, in a HPE exercise , information about me and how API works.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content  animated fadeInRight">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="ibox">
+                            <div class="ibox-content">
+                                <h2>API Documentation</h2>
+                                <p>
+                                    The API must contain mandatory 2 resources and 1 optional. Find the specification of the web services below:
+                                </p>
+                                <h3 style="margin-top: 35px;margin-bottom: 35px;">POST api/championship/result</h3>
+
+                                <p>Stores the first and second place of a tournament, each user is stored with their respective scores. The
+
+                                user names will be unique, but the same user can win 1 or more championships. Returns the operation
+
+                                status if successfully.</p>
+
+                                <h4 style="margin-top: 15px;">Resource information:</h4>
+
+                                <p>Resource URL: /api/championship/result </p>
+
+                                <p>HTTP Method: POST</p>
+
+                                <p>Response format: JSON</p>
+
+                                <p>Parameters:</p>
+                                <ul>
+                                    <li><span>first - required :</span> The name of the winner of the championship. Example: <span>Dave</span></li>
+                                    <li><span>second - required :</span> The name of the second place of the championship. Example: <span>Armando</span></li>
+                                </ul>
+
+                                <h4 style="margin-top: 15px;" >Example Request</h4>
+
+                                <p>POST https://rock-raper-scissors-gamboa.scalingo.io/api/championship/result</p>
+
+                                <p>POST Data first=Dave&second=Armando</p>
+
+                                <h4 style="margin-top: 15px;">Example Output</h4>
+                                <code>
+                                {
+
+                                status: 'success'
+
+                                }
+                                </code>
+
+
+                                <h3 style="margin-top: 35px;margin-bottom: 35px;">GET api/championship/top</h3>
+
+                                <p>Retrieves the top players of all championships. Returns the list of player names based on the count provided.</p>
+
+                                <h4 style="margin-top: 15px;">Resource information:</h4>
+
+                                <p>Resource URL: /api/championship/top </p>
+
+                                <p>HTTP Method: POST</p>
+
+                                <p>Response format: JSON</p>
+
+                                <p>Parameters:</p>
+                                <ul>
+                                    <li><span>count -optional :</span> Sets the count of records to be retrieved. If not provided, the default value is 10. Example: <span>123</span></li>
+                                </ul>
+
+                                <h4 style="margin-top: 15px;" >Example Request</h4>
+
+                                <p>GET https://rock-raper-scissors-gamboa.scalingo.io/api/championship/top?count=10</p>
+
+                                <h4 style="margin-top: 15px;">Example Output</h4>
+                                <code>
+                                {
+
+                                players: ["Dave", "Armando", "Robert"]
+
+                                }
+                                </code>
+
+
+
+
+                                <h3 style="margin-top: 35px;margin-bottom: 35px;">(Optional) POST api/championship/new</h3>
+
+                                <p>Receives the championship data and computes it to identify the winner. The first and second place are stored into a database with their respective scores. Returns the winner of the championship.</p>
+
+                                <h4 style="margin-top: 15px;">Resource information:</h4>
+
+                                <p>Resource URL: /api/championship/new </p>
+
+                                <p>HTTP Method: POST</p>
+
+                                <p>Response format: JSON</p>
+
+                                <p>Parameters:</p>
+                                <ul>
+                                    <li><span>data -mandatory :</span> The data of the championship following the bracketed array standard. Example: <span>[["Armando", "P"],["Dave", "S"]]</span></li>
+                                </ul>
+
+                                <h4 style="margin-top: 15px;" >Example Request</h4>
+
+                                <p>POST https://rock-raper-scissors-gamboa.scalingo.io/api/championship/new</p>
+                                <p>POST Data data=[["Armando", "P"],["Dave", "S"]]</p>
+                                <h4 style="margin-top: 15px;">Example Output</h4>
+                                <code>
+                                {
+
+                                winner: ["Dave", "S"]
+
+                                }
+                                </code>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="ibox ">
+
+                            <div class="ibox-content">
+                                <div class="tab-content">
+                                    <div id="contact-1" class="tab-pane active">
+                                        <div class="row m-b-lg">
+                                            <div class="col-lg-4 text-center">
+                                                <h2>Mainor</h2>
+
+                                                <div class="m-b-sm">
+                                                    <img alt="image" class="img-circle" src="img/yo.jpg" style="width: 62px">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8">
+                                                <h3>
+                                                    About me
+                                                </h3>
+                                                <p align=justify>
+                                                    I'm Mainor<br>
+                                                    With expertise in web and mobile aplications, interior and exterior desing. I like maintain a healthy balance between functionality and visual impact in all my projects,
+                                                    I truly believe, both the creation and design of simple software is an art.
+                                                </p>
+                                                <p align=justify>
+                                                    I love computer engineering and always enjoy learned new things.
+                                                </p>
+                                                <button class="btn btn-outline btn-primary dim" type="button"  onclick="window.location.href='https://github.com/mainorAC'"><i class="fa fa-github-alt"></i></button>
+                                                <button class="btn btn-outline btn-success dim" type="button" onclick="window.location.href='https://github.com/mainorAC/Rock-Paper-Scissors'"><i class="fa fa-github-square"></i></button>
+                                                <button class="btn btn-outline btn-warning dim" type="button" onclick="window.location.href='https://www.facebook.com/mainor.gamboa'"><i class="fa fa-facebook-square"></i></button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div >
+                                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+                                            <div class="full-height-scroll" style="overflow: hidden; width: auto; height: 100%;">
+
+                                            <h3>Implemented Solution</h3>
+
+                                            <ul class="list-group clear-list">
+                                                <li class="list-group-item fist-item">
+                                                    <span class="pull-right"> <i class="fa fa-check"></i> </span>
+                                                    Store first and second places
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> <i class="info fa fa-check"></i> </span>
+                                                    Top 10 player
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> <i class="info fa fa-check"></i></span>
+                                                    Resolve one championship
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> <i class="info fa fa-check"></i> </span>
+                                                    Reset data base
+                                                </li>
+                                            </ul>
+                                                 <h4>Insertion of the first and second place</h4>
+                                                <p align=justify>
+                                                It checks if the player is in the database. If it exist, it updates the score, if not it creates a newone with the corresponding score ( 3 points for fisrt place, 1 points for second place ). 
+                                                </p>
+                                                 <h4>Top 10 players</h4>
+                                                <p align=justify>
+                                                With mongoose is simple,make a top 10 database query, and add resolve names in an array for the structure required.
+                                                </p>
+
+                                                 <h4>Resolve one championship</h4>
+                                                <p align=justify>
+                                                Due to its binary tree structure, is faced recursively, solving every encounter, and returning the winner until the final match.
+                                                </p>
+                                                <h4>Reset the database</h4>
+                                                <p align=justify>
+                                                With the mongoose tool is pretty easy, with a simple command data is cleaned from the collection
+                                                </p>
+
+                                            <h3>Technologies Justification</h3>
+                                            <ul class="list-group clear-list">
+                                                <li class="list-group-item fist-item">
+                                                    <span class="pull-right"> <i class="fa fa-check"></i> </span>
+                                                    Mongo / Mongoose
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> <i class="info fa fa-check"></i> </span>
+                                                    nodeJS
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> <i class="info fa fa-check"></i></span>
+                                                    Express
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> <i class="info fa fa-check"></i></span>
+                                                    Angular
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> <i class="info fa fa-check"></i> </span>
+                                                    Boostrap
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <span class="pull-right"> <i class="info fa fa-check"></i> </span>
+                                                    Scalingo
+                                                </li>
+                                            </ul>
+                                            <h4>What is MeanJS</h4>
+                                            <p>
+                                            Full-stack JavaScript solution that helps you build fast, robust, and maintainable production.
+                                            </p>
+                                            <h4>Why MeanJS</h4>
+                                            <p align=justify>
+                                            First, I love Js, I think is simple, flexible and robust, also Mean is often used today 
+                                            and I like to keep constantly working with current technologies.
+                                            </p>
+                                            <h4>Boostrap</h4>
+                                            <p align=justify>
+                                                Boostrap makes possible the <label>fast</label> creation of simple and pretty websites.
+                                            </p>    
+                                            <h4>Scalingo</h4>
+                                            <p align=justify>
+                                            It has a free 30 days trial, also support mongo and its very easy to used with git.
+                                            </p>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
